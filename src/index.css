@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'General Sans';
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  color: #f5f7f9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+} */

@@ -41,7 +41,7 @@ const Hero = () => {
 
               <div className="hero__cta">
                 <a className="btn btn--primary" href="#projects">
-                  View recent work
+                  View my work
                 </a>
                 <a className="btn btn--ghost" href="#contact">
                   Resume

@@ -1,15 +1,9 @@
-@use "sass:color";
-
-$bg: #080f19;
-$accent: #ff6b58;
-$text: #f5f7f9;
-
 .About {
   position: relative;
   isolation: isolate;
   padding: clamp(4rem, 14vh, 6rem) clamp(1.6rem, 6vw, 4.2rem);
-  background: linear-gradient(180deg, $bg 0%, color.adjust($bg, $lightness: -6%) 100%);
-  color: $text;
+  background: linear-gradient(180deg, #050910 0%, #080f19 100%);
+  color: #f5f7f9;
 }
 
 .about__inner {
@@ -35,7 +29,7 @@ $text: #f5f7f9;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba($text, 0.7);
+  color: rgba(245, 247, 249, 0.7);
 }
 
 .about__timeline-axis {
@@ -44,7 +38,7 @@ $text: #f5f7f9;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, rgba($accent, 0.55) 0%, rgba($accent, 0.06) 100%);
+  background: linear-gradient(180deg, rgba(255, 107, 88, 0.55) 0%, rgba(255, 107, 88, 0.06) 100%);
 }
 
 .about__timeline-list {
@@ -60,7 +54,7 @@ $text: #f5f7f9;
   grid-template-columns: auto 1fr;
   gap: clamp(0.9rem, 3vw, 1.3rem);
   align-items: flex-start;
-  color: rgba($text, 0.75);
+  color: rgba(245, 247, 249, 0.75);
 }
 
 .about__timeline-marker {
@@ -69,9 +63,9 @@ $text: #f5f7f9;
   width: clamp(2.1rem, 5vw, 2.5rem);
   height: clamp(2.1rem, 5vw, 2.5rem);
   border-radius: 999px;
-  background: rgba($accent, 0.16);
-  color: $accent;
-  box-shadow: 0 12px 28px rgba($accent, 0.2);
+  background: rgba(255, 107, 88, 0.16);
+  color: #ff6b58;
+  box-shadow: 0 12px 28px rgba(255, 107, 88, 0.2);
 }
 
 .about__timeline-icon {
@@ -87,14 +81,14 @@ $text: #f5f7f9;
   margin: 0;
   font-size: clamp(1.05rem, 2.6vw, 1.28rem);
   font-weight: 600;
-  color: $text;
+  color: #f5f7f9;
 }
 
 .about__timeline-copy p {
   margin: 0;
   font-size: clamp(0.88rem, 2.2vw, 1rem);
   line-height: 1.55;
-  color: rgba($text, 0.68);
+  color: rgba(245, 247, 249, 0.68);
 }
 
 .about__details {
@@ -114,10 +108,24 @@ $text: #f5f7f9;
 
 .about__eyebrow {
   margin: 0;
-  font-size: 0.82rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.28em;
-  color: rgba($text, 0.58);
+  letter-spacing: 0.15em;
+  color: rgba(255, 107, 88, 0.9);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+}
+
+.about__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: clamp(26px, 6vw, 40px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 107, 88, 0.85), rgba(255, 107, 88, 0.55));
+  box-shadow: 0 6px 18px rgba(255, 107, 88, 0.35);
 }
 
 .about__title {
@@ -133,7 +141,7 @@ $text: #f5f7f9;
   margin: 0;
   font-size: clamp(0.96rem, 2.4vw, 1.08rem);
   line-height: 1.68;
-  color: rgba($text, 0.74);
+  color: rgba(245, 247, 249, 0.74);
   max-width: 46ch;
 }
 
@@ -151,16 +159,16 @@ $text: #f5f7f9;
   gap: 0.7rem;
   font-size: clamp(0.9rem, 2.3vw, 1rem);
   line-height: 1.55;
-  color: rgba($text, 0.78);
+  color: rgba(245, 247, 249, 0.78);
 }
 
 .about__focus-dot {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: $accent;
+  background: #ff6b58;
   margin-top: 0.45rem;
-  box-shadow: 0 0 0 4px rgba($accent, 0.12);
+  box-shadow: 0 0 0 4px rgba(255, 107, 88, 0.12);
 }
 
 .about__metrics {
@@ -173,7 +181,7 @@ $text: #f5f7f9;
   padding: clamp(1.1rem, 3vw, 1.4rem);
   border-radius: 18px;
   background: rgba(10, 16, 25, 0.72);
-  border: 1px solid rgba($text, 0.08);
+  border: 1px solid rgba(245, 247, 249, 0.08);
   display: grid;
   gap: 0.4rem;
 }
@@ -181,14 +189,14 @@ $text: #f5f7f9;
 .about__metric-value {
   font-size: clamp(1.22rem, 3vw, 1.5rem);
   font-weight: 600;
-  color: $text;
+  color: #f5f7f9;
 }
 
 .about__metric-label {
   font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba($text, 0.6);
+  color: rgba(245, 247, 249, 0.6);
 }
 
 [data-animate] {
@@ -208,7 +216,6 @@ $text: #f5f7f9;
     transform: translate3d(0, 0, 0);
   }
 }
-
 @media (max-width: 960px) {
   .about__inner {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -216,42 +223,32 @@ $text: #f5f7f9;
     grid-template-areas: "timeline details";
     align-items: flex-start;
   }
-
   .about__timeline {
     padding-left: clamp(1.4rem, 5vw, 1.9rem);
   }
-
   .about__timeline-axis {
     left: clamp(0.5rem, 3vw, 0.9rem);
   }
 }
-
 @media (max-width: 640px) {
   .About {
     padding: clamp(3.2rem, 16vh, 4.6rem) clamp(1.2rem, 7vw, 1.8rem);
   }
-
   .about__inner {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "details"
-      "timeline";
+    grid-template-areas: "details" "timeline";
     gap: clamp(2.2rem, 8vw, 3rem);
   }
-
   .about__timeline {
     padding-left: clamp(1.6rem, 7vw, 2.2rem);
   }
-
   .about__timeline-axis {
     display: none;
   }
-
   .about__timeline-heading {
     display: block;
     margin-left: clamp(0.2rem, 3vw, 0.4rem);
   }
-
   .about__timeline-progress {
     display: block;
     position: absolute;
@@ -260,42 +257,37 @@ $text: #f5f7f9;
     bottom: 0;
     width: 3px;
     border-radius: 999px;
-    background: rgba($accent, 0.2);
+    background: rgba(255, 107, 88, 0.2);
     overflow: hidden;
   }
-
   .about__timeline-progress::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: $accent;
+    background: #ff6b58;
     transform-origin: top;
     transform: scaleY(var(--progress, 0));
     transition: transform 0.25s ease;
   }
-
   .about__timeline-list {
     gap: clamp(1.3rem, 5vw, 1.9rem);
   }
-
   .about__timeline-item {
     grid-template-columns: auto 1fr;
     padding: clamp(1rem, 5vw, 1.4rem) clamp(1.1rem, 5vw, 1.5rem);
     border-radius: 18px;
     background: rgba(10, 16, 24, 0.78);
-    border: 1px solid rgba($text, 0.08);
+    border: 1px solid rgba(245, 247, 249, 0.08);
     gap: clamp(0.9rem, 4vw, 1.2rem);
   }
-
   .about__timeline-marker {
     justify-self: flex-start;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   [data-animate] {
     animation: none;
     opacity: 1;
     transform: none;
   }
-}
+}/*# sourceMappingURL=About.css.map */

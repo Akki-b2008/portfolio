@@ -123,7 +123,11 @@ const About = () => {
   return (
     <section className="About" id="about">
       <div className="about__inner">
-        <aside className="about__timeline" data-animate style={{ "--delay": "0s" }}>
+        <aside
+          className="about__timeline"
+          data-animate
+          style={{ "--delay": "0s" }}
+        >
           <p className="about__timeline-heading">My development journey</p>
           <span className="about__timeline-axis" aria-hidden="true" />
           <span
@@ -147,13 +151,21 @@ const About = () => {
         </aside>
 
         <div className="about__details">
-          <div className="about__header" data-animate style={{ "--delay": "0.18s" }}>
+          <div
+            className="about__header"
+            data-animate
+            style={{ "--delay": "0.18s" }}
+          >
             <p className="about__eyebrow">About me</p>
-            <h2 className="about__title">MERN developer focused on shipping and learning fast.</h2>
+            <h2 className="about__title">
+              MERN developer focused on shipping and learning fast.
+            </h2>
             <p className="about__copy">
-              Eight months into this MERN journey—and still building nonstop. From HTML/CSS roots to realtime AI, every
-              project sharpens how I design, debug, and deliver. The plan stays simple: learn quickly, deploy often, and
-              keep raising the bar for the products in my hands.
+              Eight months into this MERN journey—and still building nonstop.
+              From HTML/CSS roots to realtime AI, every project sharpens how I
+              design, debug, and deliver. The plan stays simple: learn quickly,
+              deploy often, and keep raising the bar for the products in my
+              hands.
             </p>
             <ul className="about__focus-list">
               {FOCUS.map((item) => (
@@ -165,7 +177,11 @@ const About = () => {
             </ul>
           </div>
 
-          <div className="about__metrics" data-animate style={{ "--delay": "0.32s" }}>
+          <div
+            className="about__metrics"
+            data-animate
+            style={{ "--delay": "0.32s" }}
+          >
             {METRICS.map(({ value, label }) => (
               <div className="about__metric" key={value}>
                 <span className="about__metric-value">{value}</span>

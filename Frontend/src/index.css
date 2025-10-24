@@ -13,6 +13,7 @@ body {
 body {
   color: #f5f7f9;
   -webkit-font-smoothing: antialiased;
+  background: linear-gradient(180deg, #050910 0%, #080f19 100%);
 }
 
 /* .container {

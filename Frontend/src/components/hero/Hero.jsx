@@ -45,7 +45,7 @@ const Hero = () => {
                 </a>
                 <a
                   className="btn btn--ghost"
-                  href="https://drive.google.com/file/d/1SuTiSxeSb5xT8bVZHG7su5-FY1pnshZu/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1UtPmZLtOq3_AIVbIPrxc99ENg_m-Tart/view?usp=drive_link"
                   target="_blank"
                   rel="noreferrer"
                 >

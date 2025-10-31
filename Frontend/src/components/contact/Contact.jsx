@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import "./contact.scss";
 import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import { FaXTwitter } from "react-icons/fa6";
@@ -30,16 +30,37 @@ const SOCIALS = [
   },
 ];
 
+const TOAST_DURATION_MS = 4200;
+
 const Contact = () => {
+  const [toastMessage, setToastMessage] = useState("");
+  const [isToastVisible, setIsToastVisible] = useState(false);
+  const toastTimeoutRef = useRef(null);
+
+  const showToast = (message) => {
+    if (toastTimeoutRef.current) {
+      clearTimeout(toastTimeoutRef.current);
+    }
+    setToastMessage(message);
+    setIsToastVisible(true);
+    toastTimeoutRef.current = window.setTimeout(() => {
+      setIsToastVisible(false);
+    }, TOAST_DURATION_MS);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (toastTimeoutRef.current) {
+        clearTimeout(toastTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const name = form.get("name") ?? "";
-    const email = form.get("email") ?? "";
-    const message = form.get("message") ?? "";
-    const body = encodeURIComponent(`Hi Akash,%0D%0A%0D%0A${message}%0D%0A%0D%0A- ${name} (${email})`);
-    window.open(`mailto:hello@akashcodes.dev?subject=Let%27s work together&body=${body}`);
     event.currentTarget.reset();
+    showToast("Thanks! I will reach out shortly.");
   };
 
   return (
@@ -91,6 +112,11 @@ const Contact = () => {
             ))}
           </ul>
         </div>
+        {isToastVisible && (
+          <div className="contact__toast" role="status" aria-live="polite">
+            {toastMessage}
+          </div>
+        )}
       </div>
     </section>
   );

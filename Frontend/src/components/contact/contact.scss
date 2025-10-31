@@ -215,6 +215,22 @@
   word-break: break-word;
 }
 
+.contact__toast {
+  position: fixed;
+  top: clamp(1.6rem, 6vw, 2.4rem);
+  right: clamp(1.6rem, 6vw, 2.4rem);
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  background: rgba(9, 15, 26, 0.94);
+  border: 1px solid rgba(255, 140, 120, 0.26);
+  box-shadow: 0 20px 42px rgba(3, 8, 16, 0.32);
+  color: #f5f7f9;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  z-index: 1000;
+  animation: contact-toast-in 0.24s ease forwards;
+}
+
 [data-animate] {
   opacity: 0;
   transform: translate3d(0, 26px, 0);
@@ -226,6 +242,17 @@
   from {
     opacity: 0;
     transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes contact-toast-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -16px, 0);
   }
   to {
     opacity: 1;

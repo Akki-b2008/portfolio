@@ -43,7 +43,12 @@ const Hero = () => {
                 <a className="btn btn--primary" href="#projects">
                   View my work
                 </a>
-                <a className="btn btn--ghost" href="#contact">
+                <a
+                  className="btn btn--ghost"
+                  href="https://drive.google.com/file/d/1SuTiSxeSb5xT8bVZHG7su5-FY1pnshZu/view?usp=drive_link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Resume
                 </a>
               </div>
